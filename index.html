@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="icon" href="./assest/img/netflix.png">
+    <link rel="stylesheet" href="./bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./fontawesome-free-6.1.1-web/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css">
+    <link rel="stylesheet" href="./assest/css/cus.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,900;1,100;1,300;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+
+    <div class="d-flex">
+        <aside class="aside">
+          <div class="position-sticky top-0 p-2 bg-white vh-100">
+            <div class="card shadow">
+                <div class="card-body p-1">
+                    <div class="mb-4 ms-3">
+                         <img src="./assest/img/netflix.png" alt="" class="w-25">
+                        <span class="fw-bold">NETFLIX</span>
+                        <p class="mb-0 fw-bold small">Admin Dashboard</p>
+                    </div>
+                    <div class="mb-4 ms-3">
+                        <div class="d-flex justify-content-start align-items-center border p-1 rounded-3" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                            <span><i class="fa-solid fa-magnifying-glass"></i></span>
+                            <input type="text" placeholder="Search" class="form-control border-0 bg-white" disabled>
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="list-group list-group-flush mb-3">
+                            <li class="list-group-item disabled" aria-disabled="true">Menu</li>
+                            <a href="#" class="list-group-item list-group-item-action active">
+                            <i class="fa-solid fa-house me-2 fa-fw"></i>
+                              Dashboard
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action">
+                             <i class="fa-sharp fa-solid fa-dollar-sign me-2 fa-fw"></i>
+                              Income
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action">
+                             <i class="fa-solid fa-paper-plane me-2 fa-fw"></i>
+                                Post
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action">
+                                <i class="fa-solid fa-user me-2 fa-fw"></i>
+                              Customer Care
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action">
+                                <i class="fa-solid fa-chart-line me-2 fa-fw"></i>
+                              Sale Analysis
+                            </a>
+                          </div>
+                          <div class="list-group list-group-flush">
+                            <li class="list-group-item disabled" aria-disabled="true">Settings</li>
+                            <a href="#" class="list-group-item list-group-item-action">
+                                <i class="fa-solid fa-user-lock me-2 fa-fw"></i>
+                              Password
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action">
+                                <i class="fa-solid fa-sun me-2 fa-fw"></i>
+                              Theme
+                            </a>
+                          </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </aside>
+        <div class="__backdrop fade"></div>
+        <main class="main">
+            <div class="container-fluid">
+                 <nav class="row px-2 mb-3 pt-2 position-sticky top-0 nav">
+                      <div class="col shadow">
+                             <div class="row justify-content-between align-items-center border p-1 rounded-2">
+                                <div class="col d-lg-none">
+                                     <div class="aside-btn">
+                                        <i class="fa-solid fa-bars fa-2x text-secondary ms-1"></i>
+                                    </div>
+                                </div>
+                                    <div class="col">
+                                        <div class="text-center text-lg-start">
+                                            <img src="./assest/img/netflix.png" alt="" class="nav-icon">
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="me-3 text-end">
+                                            <i class="fa-solid fa-gears me-2" data-bs-toggle="modal" data-bs-target="#staticBackdrop1"></i>
+                                            <a class="position-relative">
+                                                <i class="fa-solid fa-bell cl p-2"></i>
+                                                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg1">
+                                                  99+
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                       <div class="row">
+                          <div class="col-xl-6 mt-3">
+                                    <div class="row g-3">
+                                          <div class="col-xl-6 col-md-6">
+                                              <div class="card shadow border-0 rounded-3">
+                                                   <div class="card-body">
+                                                       <div class="d-flex justify-content-between align-items-center">
+                                                             <div class="card-icon d-flex justify-content-center align-items-center alert alert-primary rounded-circle">
+                                                                <i class="fa-solid fa-user text-primary"></i>
+                                                             </div>
+                                                             <span class="text-success mb-3"> +42% <i class="fa-solid fa-arrow-up"></i></span>
+                                                       </div>
+                                                       <h4 class="fw-bold mb-0">100,000 M</h4>
+                                                       <span class="text-muted ms-1 small">Visitor</span>
+                                                   </div>
+                                              </div>
+                                          </div>
+                                          <div class="col-xl-6 col-md-6">
+                                            <div class="card shadow border-0 rounded-3">
+                                                 <div class="card-body">
+                                                     <div class="d-flex justify-content-between align-items-center">
+                                                           <div class="card-icon d-flex justify-content-center align-items-center alert bg2 rounded-circle">
+                                                              <i class="fa-solid fa-user cl1"></i>
+                                                           </div>
+                                                           <span class="cl mb-3"> -42% <i class="fa-solid fa-arrow-down"></i></span>
+                                                     </div>
+                                                     <h4 class="fw-bold mb-0">100,000 M</h4>
+                                                     <span class="text-muted ms-1 small">Visitor</span>
+                                                 </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-6">
+                                            <div class="card shadow border-0 rounded-3">
+                                                 <div class="card-body">
+                                                     <div class="d-flex justify-content-between align-items-center">
+                                                           <div class="card-icon d-flex justify-content-center align-items-center alert bg3 rounded-circle">
+                                                              <i class="fa-solid fa-user cl2"></i>
+                                                           </div>
+                                                           <span class="text-success mb-3"> +42% <i class="fa-solid fa-arrow-up"></i></span>
+                                                     </div>
+                                                     <h4 class="fw-bold mb-0">100,000 M</h4>
+                                                     <span class="text-muted ms-1 small">Visitor</span>
+                                                 </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-6">
+                                            <div class="card shadow border-0 rounded-3">
+                                                 <div class="card-body">
+                                                     <div class="d-flex justify-content-between align-items-center">
+                                                           <div class="card-icon d-flex justify-content-center align-items-center alert bg4 rounded-circle">
+                                                              <i class="fa-solid fa-user cl3"></i>
+                                                           </div>
+                                                           <span class="text-success mb-3"> +42% <i class="fa-solid fa-arrow-up"></i></span>
+                                                     </div>
+                                                     <h4 class="fw-bold mb-0">100,000 M</h4>
+                                                     <span class="text-muted ms-1 small">Visitor</span>
+                                                 </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                              </div>
+                            <div class="col-xl-6 mt-3">
+                                  <div class="card shadow border-0 rounded-3">
+                                      <div class="card-body">
+                                          <h3 class="card-title mb-2">Top Sales</h3>
+                                          <span class="small">Total</span>
+                                          <h4 class="fw-bold mb-1">$ 2,254.72 M</h4>
+                                          <div class="d-flex justify-content-start">
+                                             <div class="card-icon d-flex align-items-center justify-content-center alert alert-warning">
+                                                <i class="fa-solid fa-pen-clip cl1"></i>
+                                             </div>
+                                             <div class="w-100 mx-2">
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <h6 class="text-muted small mb-0">Item 1</h6>
+                                                   <h6 class="mb-0">$ 334.24 M</h6>
+                                                   </div>
+                                              <div class="progress"  style="height: 10px;">
+                                                <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" role="progressbar" aria-label="Basic example" style="width: 50%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                              </div>
+                                              </div>
+                                          </div>
+
+                                          <div class="d-flex justify-content-start">
+                                            <div class="card-icon d-flex align-items-center justify-content-center alert alert-danger">
+                                               <i class="fa-solid fa-pen-clip cl2"></i>
+                                            </div>
+                                            <div class="w-100 mx-2">
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <h6 class="text-muted small mb-0">Item 2</h6>
+                                                   <h6 class="mb-0">$ 800.24 M</h6>
+                                                   </div>
+                                             <div class="progress"  style="height: 10px;">
+                                               <div class="progress-bar progress-bar-striped progress-bar-animated bg5" role="progressbar" aria-label="Basic example" style="width: 65%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                             </div>
+                                             </div>
+                                         </div>
+
+                                         <div class="d-flex justify-content-start">
+                                            <div class="card-icon d-flex align-items-center justify-content-center alert alert-success">
+                                               <i class="fa-solid fa-pen-clip"></i>
+                                            </div>
+                                            <div class="w-100 mx-2">
+                                               <div class="d-flex justify-content-between align-items-center">
+                                                <h6 class="text-muted small mb-0">Item 3</h6>
+                                               <h6 class="mb-0">$ 1,110.24 M</h6>
+                                               </div>
+                                             <div class="progress" style="height: 10px;">
+                                               <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-label="Basic example" style="width: 85%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                             </div>
+                                             </div>
+                                         </div>
+
+
+                                      </div>
+                                  </div>
+                            </div>
+                       </div>
+                       <div class="row">
+                          <div class="col my-5">
+                              <div class="card border-0 shadow rounded-3">
+                                   <div class="card-body">
+                                    <div class="my-3 d-flex justify-content-between align-items-center">
+                                        <h4 class="fw-bold">Visitor</h4>
+                                        <div class="dropdown">
+                                            <a href="#" class="dropdown-toggle text-decoration-none" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                              Months
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                              <li><a class="dropdown-item" href="#">
+                                                 <p class="cl3 fw-bold small">January</p>
+                                              </a></li>
+                                              <li><a class="dropdown-item" href="#">
+                                                <p  class="cl3 fw-bold small">February</p>
+                                             </a></li>
+                                             <li><a class="dropdown-item" href="#">
+                                                <p class="cl3 fw-bold small">March</p>
+                                             </a></li>
+                                             <li><a class="dropdown-item" href="#">
+                                                <p class="cl3 fw-bold small">April</p>
+                                             </a></li>
+                                             <li><a class="dropdown-item" href="#">
+                                                <p class="cl3 fw-bold small">May</p>
+                                             </a></li>
+                                            </ul>
+                                          </div>
+                                          <div class="dropdown">
+                                            <a href="#" class="dropdown-toggle text-decoration-none" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                              Country
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                              <li><a class="dropdown-item" href="#">
+                                                <img src="./assest/img/Flag-United-States-of-America.png" alt="" class="card-icon rounded-1">
+                                                <span class="fw-bold small">United-States-of-America</span>
+                                              </a></li>
+                                              <li><a class="dropdown-item" href="#">
+                                                <img src="./assest/img/2560px-Flag_of_the_United_Kingdom_(2-3).svg.png" alt="" class="card-icon rounded-1">
+                                                <span class="fw-bold small">United Kingdom(England)</span>
+                                              </a></li>
+                                              <li><a class="dropdown-item" href="#">
+                                                <img src="./assest/img/spain.jpg" alt="" class="card-icon rounded-1">
+                                                <span class="fw-bold small">Spain</span>
+                                              </a></li>
+                                              <li><a class="dropdown-item" href="#">
+                                                <img src="./assest/img/downloadf.png" alt="" class="card-icon rounded-1">
+                                                <span class="fw-bold small">France</span>
+                                              </a></li>
+                                              <li><a class="dropdown-item" href="#">
+                                                <img src="./assest/img/Flag_of_Myanmar.svg.png" alt="" class="card-icon rounded-1">
+                                                <span class="fw-bold small">Myanmar</span>
+                                              </a></li>                  
+                                            </ul>
+                                          </div>
+                                    </div>
+                                    <div class="line-chart">
+                                    <canvas id="myChart"></canvas>       
+                                   </div>  
+                                 </div>                       
+                              </div>
+                          </div>
+                       </div>
+                      <div class="row">
+                         <div class="col-xl-8 col-md-6">
+                              <div class="card shadow border-0 mb-4 rounded-3">
+                                <div class="card-body">
+                                    <h4 class="my-3 fw-bold cl">Order List</h4>
+                                 <div class="table-responsive hh"> 
+                                <table id="tt" class="table table-hover text-nowrap" style="width:100%">
+                                    <thead>
+                                        <tr class="text-secondary">
+                                            <th>Name</th>
+                                            <th>Position</th>
+                                            <th>Office</th>
+                                            <th>Age</th>
+                                            <th>Start date</th>
+                                            <th>Salary</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="text-muted">
+                                        <tr>
+                                            <td>Tiger Nixon</td>
+                                            <td>System Architect</td>
+                                            <td>Edinburgh</td>
+                                            <td>61</td>
+                                            <td>2011-04-25</td>
+                                            <td>$320,800</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Garrett Winters</td>
+                                            <td>Accountant</td>
+                                            <td>Tokyo</td>
+                                            <td>63</td>
+                                            <td>2011-07-25</td>
+                                            <td>$170,750</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Ashton Cox</td>
+                                            <td>Junior Technical Author</td>
+                                            <td>San Francisco</td>
+                                            <td>66</td>
+                                            <td>2009-01-12</td>
+                                            <td>$86,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Cedric Kelly</td>
+                                            <td>Senior Javascript Developer</td>
+                                            <td>Edinburgh</td>
+                                            <td>22</td>
+                                            <td>2012-03-29</td>
+                                            <td>$433,060</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Airi Satou</td>
+                                            <td>Accountant</td>
+                                            <td>Tokyo</td>
+                                            <td>33</td>
+                                            <td>2008-11-28</td>
+                                            <td>$162,700</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Brielle Williamson</td>
+                                            <td>Integration Specialist</td>
+                                            <td>New York</td>
+                                            <td>61</td>
+                                            <td>2012-12-02</td>
+                                            <td>$372,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Herrod Chandler</td>
+                                            <td>Sales Assistant</td>
+                                            <td>San Francisco</td>
+                                            <td>59</td>
+                                            <td>2012-08-06</td>
+                                            <td>$137,500</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Rhona Davidson</td>
+                                            <td>Integration Specialist</td>
+                                            <td>Tokyo</td>
+                                            <td>55</td>
+                                            <td>2010-10-14</td>
+                                            <td>$327,900</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Colleen Hurst</td>
+                                            <td>Javascript Developer</td>
+                                            <td>San Francisco</td>
+                                            <td>39</td>
+                                            <td>2009-09-15</td>
+                                            <td>$205,500</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sonya Frost</td>
+                                            <td>Software Engineer</td>
+                                            <td>Edinburgh</td>
+                                            <td>23</td>
+                                            <td>2008-12-13</td>
+                                            <td>$103,600</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Jena Gaines</td>
+                                            <td>Office Manager</td>
+                                            <td>London</td>
+                                            <td>30</td>
+                                            <td>2008-12-19</td>
+                                            <td>$90,560</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Quinn Flynn</td>
+                                            <td>Support Lead</td>
+                                            <td>Edinburgh</td>
+                                            <td>22</td>
+                                            <td>2013-03-03</td>
+                                            <td>$342,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Charde Marshall</td>
+                                            <td>Regional Director</td>
+                                            <td>San Francisco</td>
+                                            <td>36</td>
+                                            <td>2008-10-16</td>
+                                            <td>$470,600</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Haley Kennedy</td>
+                                            <td>Senior Marketing Designer</td>
+                                            <td>London</td>
+                                            <td>43</td>
+                                            <td>2012-12-18</td>
+                                            <td>$313,500</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Tatyana Fitzpatrick</td>
+                                            <td>Regional Director</td>
+                                            <td>London</td>
+                                            <td>19</td>
+                                            <td>2010-03-17</td>
+                                            <td>$385,750</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Michael Silva</td>
+                                            <td>Marketing Designer</td>
+                                            <td>London</td>
+                                            <td>66</td>
+                                            <td>2012-11-27</td>
+                                            <td>$198,500</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Paul Byrd</td>
+                                            <td>Chief Financial Officer (CFO)</td>
+                                            <td>New York</td>
+                                            <td>64</td>
+                                            <td>2010-06-09</td>
+                                            <td>$725,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Gloria Little</td>
+                                            <td>Systems Administrator</td>
+                                            <td>New York</td>
+                                            <td>59</td>
+                                            <td>2009-04-10</td>
+                                            <td>$237,500</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Bradley Greer</td>
+                                            <td>Software Engineer</td>
+                                            <td>London</td>
+                                            <td>41</td>
+                                            <td>2012-10-13</td>
+                                            <td>$132,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Dai Rios</td>
+                                            <td>Personnel Lead</td>
+                                            <td>Edinburgh</td>
+                                            <td>35</td>
+                                            <td>2012-09-26</td>
+                                            <td>$217,500</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Jenette Caldwell</td>
+                                            <td>Development Lead</td>
+                                            <td>New York</td>
+                                            <td>30</td>
+                                            <td>2011-09-03</td>
+                                            <td>$345,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Yuri Berry</td>
+                                            <td>Chief Marketing Officer (CMO)</td>
+                                            <td>New York</td>
+                                            <td>40</td>
+                                            <td>2009-06-25</td>
+                                            <td>$675,000</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                </div>
+                                </div>
+                              </div>
+                         </div>
+                         <div class="col-xl-4 col-md-6">
+                            <div class="card mb-4 shadow border-0 rounded-3">
+                                 <div class="card-body">
+                                    <h4 class="fw-bold mb-0 cl">Ultimate Visitor</h4>
+                                    <span class="small">Total</span>
+                                    <h4 class="fw-bold mb-0">$ 3020.98 M</h4>
+                                    <div class="visitor">
+                                        <canvas id="myVistor"></canvas>
+                                      </div>
+                                 </div>
+                            </div>
+                         </div>
+                      </div>
+                  </div>
+             </main>
+        </div>
+
+
+
+
+<!-- Model -->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Search</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="mb-4 ms-3">
+                <div class="d-flex justify-content-start align-items-center border p-1 rounded-3">
+                    <span><i class="fa-solid fa-magnifying-glass"></i></span>
+                    <input type="text" placeholder="Search" class="form-control border-0 bg-white">
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Model1 -->
+  <div class="modal fade" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title cl" id="staticBackdropLabel1"><i class="fa-solid fa-user cl"></i> User Info</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="text-center">
+                    <img src="./assest/img/waiyanlatt.jpg" alt="" class="modimg rounded-3">
+                    <div class="logo">
+                        <img src="./assest/img/net.jpg" alt="" class="logo1 rounded-circle border border-5 border-white">
+                        <h3 class="fw-bold mt-3">Wai Yan Latt</h3>
+                    </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<script src="./bootstrap/dist/js/bootstrap.bundle.js"></script>
+<script src="./package/dist/chart.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
+<script src="./assest/js/cus.js"></script>
+</body>
+</html>

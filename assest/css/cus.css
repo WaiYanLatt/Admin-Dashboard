@@ -1,0 +1,99 @@
+*{
+ font-family: 'Roboto', sans-serif;
+ font-size: small;
+}
+.main{
+    width: 100%;
+}
+.aside{
+    width: 20rem;
+}
+.list-group-item{
+    border-color:transparent!important;
+    border-left-width:4px!important ;
+}
+.list-group-item.active{
+    background-color: transparent;
+    color: #e40813;
+    border-style:solid ;
+    border-left-color:#e40813!important ;
+}
+.nav-icon{
+    width: 65px;
+    height: 50px;
+}
+.cl{
+    color: #e40813;
+}
+.cl1{
+    color: #ca8a04;
+}
+.cl2{
+    color: #ef5757;
+}
+.cl3{
+    color:#ac67f7 ;
+}
+.bg1{
+    background-color: #e40813;
+}
+.bg2{
+    background-color: #fef9c3;
+}
+.bg3{
+    background-color: #fee2e2;
+}
+.bg4{
+    background-color: #f3e8ff;
+}
+.bg5{
+    background-color: #ef5757;
+}
+.bg6{
+    background-color: #d1e7dd;
+}
+.card-icon{
+    width: 2.5rem;
+    height: 2.5rem;
+}
+.line-chart{
+    height: 15rem;
+}
+.hh{
+    height: 15rem;
+    width: 100%;
+}
+.visitor{
+    height: 13.7rem;
+}
+.nav{
+    z-index: 5;
+    background-color:white;
+}
+.modimg{
+    height: 300px;
+    width: 100%;
+}
+.logo{
+    margin-top: -50px;
+}
+.logo1{
+    width: 100px;
+    height: 100px;
+    background-color:white;
+}
+@media screen and (max-width:850px) {
+    .aside{
+        position: fixed;
+        width:13rem;
+        top: 0;
+        left:-100%;
+        transition: 1s;
+        z-index: 1041;
+        height: 100vh;
+        background-color:white;
+    }
+    .aside.show{
+        left: 0;
+    }
+}
